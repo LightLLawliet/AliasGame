@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.MainActivity">
+
+    <TextView
+        style="@style/robotoMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.30125"
+        android:text="@string/improvisationMainText"
+        android:textColor="@color/black"
+        android:textSize="@dimen/mainTextSize" />
+
+    <TextView
+        style="@style/robotoMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".04875"
+        android:text="@string/gameForCompany"
+        android:textColor="@color/grey_subtitle"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        style="@style/robotoMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".27">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/rulesButton"
+            style="@style/upMainButton"
+            android:text="@string/rulesTitleText"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/main_blue"
+            app:strokeWidth="2dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/robotoMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/aboutUsButton"
+            style="@style/upMainButton"
+            android:text="@string/aboutUsTitleText"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/main_blue"
+            app:strokeWidth="2dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/robotoMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.13875">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/startButton"
+            android:text="@string/startText"
+            app:cornerRadius="30dp"
+            style="@style/mainRoundButton" />
+    </LinearLayout>
+
+
+    <TextView
+        style="@style/robotoMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1025"
+        android:gravity="center"
+        android:text="@string/v0_1"
+        android:textSize="16sp" />
+
+</LinearLayout>
