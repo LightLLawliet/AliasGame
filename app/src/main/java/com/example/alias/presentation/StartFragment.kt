@@ -1,6 +1,7 @@
 package com.example.alias.presentation
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,7 +33,7 @@ class StartFragment : Fragment() {
                 .navigate(parentFragmentManager, R.id.container)
         }
         mainGameButton.setOnClickListener {
-            NavigationStrategy.Add(BridgeFragment())
+            NavigationStrategy.Replace(BridgeFragment())
                 .navigate(parentFragmentManager, R.id.container)
         }
     }

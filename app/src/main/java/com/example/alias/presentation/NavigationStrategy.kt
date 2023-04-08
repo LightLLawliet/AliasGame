@@ -1,6 +1,5 @@
 package com.example.alias.presentation
 
-import androidx.annotation.AnimatorRes
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
@@ -13,7 +12,12 @@ interface NavigationStrategy {
     abstract class Abstract(protected val fragment: Fragment) : NavigationStrategy {
         override fun navigate(supportFragmentManager: FragmentManager, containerId: Int) {
             supportFragmentManager.beginTransaction()
-                .setCustomAnimations(R.anim.left_to_right, 0)
+                .setCustomAnimations(
+                    R.anim.enter_right_to_left,
+                    R.anim.exit_right_to_left,
+                    R.anim.enter_left_to_right,
+                    R.anim.exit_left_to_right
+                )
                 .executeTransaction(containerId)
                 .commit()
         }

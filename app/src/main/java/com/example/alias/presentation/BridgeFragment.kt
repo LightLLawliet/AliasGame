@@ -29,7 +29,7 @@ class BridgeFragment : Fragment() {
                 .navigate(parentFragmentManager, R.id.container)
         }
         backButton.setOnClickListener {
-            NavigationStrategy.Add(StartFragment())
+            NavigationStrategy.Replace(StartFragment())
                 .navigate(parentFragmentManager, R.id.container)
         }
     }
