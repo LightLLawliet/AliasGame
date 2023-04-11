@@ -14,19 +14,9 @@ class MainActivity : AppCompatActivity(), ShowFragment {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        viewModel = (application as ProvideViewModel).provideViewModel(
-//            MainViewModel::class.java, this
-//        )
-
         if (savedInstanceState == null)
             NavigationStrategy.Replace(StartFragment())
                 .navigate(supportFragmentManager, R.id.container)
-
-//        viewModel.observeNavigation(this) { strategy ->
-//            strategy.navigate(supportFragmentManager, R.id.container)
-//        }
-//
-//        viewModel.init()
     }
 
     override fun show(fragment: Fragment) =

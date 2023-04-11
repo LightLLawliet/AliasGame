@@ -1,9 +1,11 @@
 package com.example.alias.presentation
 
+import CloudDataSource
 import android.app.Application
-import com.example.alias.data.ManageResources
-import com.example.alias.data.Repository
-import com.example.alias.data.ResultCommunication
+import com.example.alias.data.*
+import io.realm.Realm
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class AliasApp : Application() {
 
@@ -11,10 +13,22 @@ class AliasApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        viewModel =
-            MainViewModel(
-                Repository.Base(ManageResources.Base(this)),
-                ResultCommunication.Base()
+        Realm.init(this)
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://riddles-api.vercel.app/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+        val manageResources = ManageResources.Base(this)
+        viewModel = MainViewModel(
+            BaseRepository(
+                CloudDataSource.Base(
+                    retrofit.create(RiddleService::class.java),
+                    manageResources
+                ),
+                CacheDataSource.Base(object : ProvideRealm {
+                    override fun provideRealm(): Realm = Realm.getDefaultInstance()
+                })
             )
+        )
     }
 }

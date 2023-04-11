@@ -12,4 +12,6 @@
     <string name="backToStartScreen">Вернуться на главную</string>
     <string name="seconds_left">seconds left</string>
     <string name="_0">0</string>
+    <string name="no_connection_message">No connection</string>
+    <string name="service_unavailable_message">Service unavailable</string>
 </resources>

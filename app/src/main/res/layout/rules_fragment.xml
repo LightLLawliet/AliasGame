@@ -5,6 +5,7 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:layout_gravity="center"
         android:text="@string/rulesTitleText"
         style="@style/fragmentTitle" />
 
