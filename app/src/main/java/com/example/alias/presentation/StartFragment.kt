@@ -33,7 +33,7 @@ class StartFragment : Fragment() {
                 .navigate(parentFragmentManager, R.id.container)
         }
         mainGameButton.setOnClickListener {
-            NavigationStrategy.Replace(BridgeFragment())
+            NavigationStrategy.Add(MainGameFragment())
                 .navigate(parentFragmentManager, R.id.container)
         }
     }

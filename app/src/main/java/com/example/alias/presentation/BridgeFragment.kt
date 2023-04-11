@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.alias.R
-import kotlin.system.exitProcess
 
 class BridgeFragment : Fragment() {
 
