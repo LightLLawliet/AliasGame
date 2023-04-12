@@ -1,5 +1,7 @@
-package com.example.alias.data
+package com.example.alias.data.cache
 
+import com.example.alias.data.Error
+import com.example.alias.data.Riddle
 import io.realm.Realm
 
 interface CacheDataSource : DataSource {
@@ -25,7 +27,7 @@ interface RiddleResult : Riddle {
 
     fun errorMessage(): String
 
-    class Success(private val riddle: Riddle) : RiddleResult{
+    class Success(private val riddle: Riddle) : RiddleResult {
 
         override fun isSuccessful(): Boolean = true
 

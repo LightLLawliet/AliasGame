@@ -1,5 +1,6 @@
-package com.example.alias.data
+package com.example.alias.data.cloud
 
+import com.example.alias.data.Riddle
 import com.google.gson.annotations.SerializedName
 
 class RiddleCloud(

@@ -2,15 +2,16 @@ package com.example.alias.presentation
 
 interface RiddleUi {
 
-    fun show(factUiCallback: FactUiCallback)
+    fun showRiddle(riddleUiCallback: RiddleUiCallback)
 
     abstract class Abstract(
         private val riddle: String,
         private val answer: String
     ) : RiddleUi {
 
-        override fun show(factUiCallback: FactUiCallback) = with(factUiCallback) {
-            provideText("$riddle\n\n$answer")
+        override fun showRiddle(riddleUiCallback: RiddleUiCallback) = with(riddleUiCallback) {
+            provideRiddle(riddle)
+            provideAnswer(answer)
         }
     }
 

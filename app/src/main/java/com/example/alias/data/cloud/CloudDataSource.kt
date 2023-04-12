@@ -1,4 +1,8 @@
+package com.example.alias.data.cloud
+
 import com.example.alias.data.*
+import com.example.alias.data.cache.DataSource
+import com.example.alias.data.cache.RiddleResult
 import java.net.UnknownHostException
 
 interface CloudDataSource : DataSource {

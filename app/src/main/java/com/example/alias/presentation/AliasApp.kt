@@ -1,8 +1,11 @@
 package com.example.alias.presentation
 
-import CloudDataSource
+import com.example.alias.data.cloud.CloudDataSource
 import android.app.Application
 import com.example.alias.data.*
+import com.example.alias.data.cache.CacheDataSource
+import com.example.alias.data.cache.ProvideRealm
+import com.example.alias.data.cloud.RiddleService
 import io.realm.Realm
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

@@ -14,4 +14,8 @@
     <string name="_0">0</string>
     <string name="no_connection_message">No connection</string>
     <string name="service_unavailable_message">Service unavailable</string>
+    <string name="riddle">Riddle</string>
+    <string name="show_answer">Show Answer</string>
+    <string name="next_riddle">Next riddle</string>
+    <string name="press_riddle_to_start">Press \'Riddle\' to start</string>
 </resources>

@@ -17,12 +17,12 @@ class MainViewModel(
     dispatchersList: DispatchersList = DispatchersList.Base(),
 ) : BaseViewModel(dispatchersList = dispatchersList) {
 
-    private var factUiCallback: FactUiCallback = FactUiCallback.Empty()
+    private var riddleUiCallback: RiddleUiCallback = RiddleUiCallback.Empty()
 
-    private val blockUi: suspend (RiddleUi) -> Unit = { it.show(factUiCallback) }
+    private val blockUi: suspend (RiddleUi) -> Unit = { it.showRiddle(riddleUiCallback) }
 
-    fun init(factUiCallback: FactUiCallback) {
-        this.factUiCallback = factUiCallback
+    fun init(riddleUiCallback: RiddleUiCallback) {
+        this.riddleUiCallback = riddleUiCallback
     }
 
     fun getRiddle() {
@@ -37,17 +37,21 @@ class MainViewModel(
 
     override fun onCleared() {
         super.onCleared()
-        factUiCallback = FactUiCallback.Empty()
+        riddleUiCallback = RiddleUiCallback.Empty()
     }
 }
 
-interface FactUiCallback {
+interface RiddleUiCallback {
 
-    fun provideText(text: String)
+    fun provideRiddle(riddle: String)
 
-    class Empty : FactUiCallback {
+    fun provideAnswer(answer: String)
 
-        override fun provideText(text: String) = Unit
+    class Empty : RiddleUiCallback {
+
+        override fun provideRiddle(riddle: String) = Unit
+
+        override fun provideAnswer(answer: String) = Unit
     }
 }
 

@@ -4,7 +4,6 @@
     <style name="robotoMedium">
         <item name="android:fontFamily">@font/roboto_medium_g</item>
         <item name="android:gravity">bottom|center</item>
-        <item name="android:textFontWeight">500</item>
     </style>
 
     <style name="upMainButton">
@@ -38,6 +37,17 @@
         <item name="android:textSize">24sp</item>
     </style>
 
+    <style name="gameRoundButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/main_blue</item>
+        <item name="android:letterSpacing">.01</item>
+        <item name="android:paddingHorizontal">10dp</item>
+        <item name="android:paddingVertical">15dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
     <style name="buttonNavigateText">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -46,5 +56,28 @@
         <item name="android:letterSpacing">0.01</item>
         <item name="android:textColor">@color/main_blue</item>
         <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="answer_style">
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:fontFamily">@font/roboto_flex</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="riddle_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">8</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:fontFamily">@font/roboto_medium_g</item>
+        <item name="android:maxLines">20</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
     </style>
 </resources>

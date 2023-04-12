@@ -28,18 +28,35 @@ class MainGameFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val startButton = view.findViewById<Button>(R.id.startGameButton)
+        val showButton = view.findViewById<Button>(R.id.showAnswer)
         val textView = view.findViewById<TextView>(R.id.textTitle)
+        val titleText = view.findViewById<TextView>(R.id.titleText)
+
         startButton.setOnClickListener {
-            startButton.isEnabled = false
+            textView.visibility = View.GONE
+            titleText.visibility = View.GONE
+            startButton.text = getString(R.string.next_riddle)
+            startButton.visibility = View.GONE
+            showButton.visibility = View.GONE
             viewModel.getRiddle()
         }
-        val factUiCallback = object : FactUiCallback {
-            override fun provideText(text: String) {
-                startButton.isEnabled = true
-                textView.text = text
-                textView.movementMethod
+
+        val riddleUiCallback = object : RiddleUiCallback {
+            override fun provideRiddle(riddle: String) {
+                startButton.visibility = View.VISIBLE
+                titleText.visibility = View.VISIBLE
+                titleText.text = riddle
+            }
+
+            override fun provideAnswer(answer: String) {
+                showButton.visibility = View.VISIBLE
+                textView.text = answer
             }
         }
-        viewModel.init(factUiCallback)
+
+        showButton.setOnClickListener {
+            textView.visibility = View.VISIBLE
+        }
+        viewModel.init(riddleUiCallback)
     }
 }

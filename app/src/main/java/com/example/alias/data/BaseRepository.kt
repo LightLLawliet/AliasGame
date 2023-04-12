@@ -1,6 +1,8 @@
 package com.example.alias.data
 
-import CloudDataSource
+import com.example.alias.data.cache.CacheDataSource
+import com.example.alias.data.cache.RiddleResult
+import com.example.alias.data.cloud.CloudDataSource
 import com.example.alias.presentation.RiddleUi
 
 class BaseRepository(

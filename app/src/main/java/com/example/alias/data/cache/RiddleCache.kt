@@ -1,5 +1,6 @@
-package com.example.alias.data
+package com.example.alias.data.cache
 
+import com.example.alias.data.Riddle
 import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
 
