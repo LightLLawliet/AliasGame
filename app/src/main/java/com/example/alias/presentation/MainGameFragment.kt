@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.example.alias.AliasApp
 import com.example.alias.R
 
 class MainGameFragment : Fragment() {
@@ -36,19 +37,21 @@ class MainGameFragment : Fragment() {
             textView.visibility = View.GONE
             titleText.visibility = View.GONE
             startButton.text = getString(R.string.next_riddle)
-            startButton.visibility = View.GONE
-            showButton.visibility = View.GONE
+            startButton.isEnabled = false
+            showButton.isEnabled = false
             viewModel.getRiddle()
         }
 
         val riddleUiCallback = object : RiddleUiCallback {
             override fun provideRiddle(riddle: String) {
+                startButton.isEnabled = true
                 startButton.visibility = View.VISIBLE
                 titleText.visibility = View.VISIBLE
                 titleText.text = riddle
             }
 
             override fun provideAnswer(answer: String) {
+                showButton.isEnabled = true
                 showButton.visibility = View.VISIBLE
                 textView.text = answer
             }

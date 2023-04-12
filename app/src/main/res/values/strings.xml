@@ -18,4 +18,5 @@
     <string name="show_answer">Show Answer</string>
     <string name="next_riddle">Next riddle</string>
     <string name="press_riddle_to_start">Press \'Riddle\' to start</string>
+    <string name="back_button">back_button</string>
 </resources>

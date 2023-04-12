@@ -1,4 +1,4 @@
-package com.example.alias.presentation
+package com.example.alias
 
 import com.example.alias.data.cloud.CloudDataSource
 import android.app.Application
@@ -6,6 +6,7 @@ import com.example.alias.data.*
 import com.example.alias.data.cache.CacheDataSource
 import com.example.alias.data.cache.ProvideRealm
 import com.example.alias.data.cloud.RiddleService
+import com.example.alias.presentation.MainViewModel
 import io.realm.Realm
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
