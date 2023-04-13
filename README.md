@@ -1,6 +1,8 @@
 # AliasGame
 Alias game written with MVVM, Coroutines, Retrofit2 and Navigation Strategy
 
-![Screenshot (5413)](https://user-images.githubusercontent.com/99660044/231243804-d1cec0db-71e6-4f8f-bcab-8a5a552155a7.png)
-![Screenshot (5414)](https://user-images.githubusercontent.com/99660044/231243812-50f88862-ba75-4dbc-b789-634c6f68aa70.png)
-![Screenshot (5415)](https://user-images.githubusercontent.com/99660044/231243821-3d0a9f08-080e-4558-96ad-1e8ac6b3f1a7.png)
+![Screenshot (5773)](https://user-images.githubusercontent.com/99660044/231889558-fd2b77a5-23ab-47df-8160-0be2f8f4444a.png)
+![Screenshot (5775)](https://user-images.githubusercontent.com/99660044/231889567-531836cd-ea01-45b5-902c-e3950450e611.png)
+![Screenshot (5826)](https://user-images.githubusercontent.com/99660044/231889791-9a3792fe-de74-4311-bacc-f70202fc114b.png)
+![Screenshot (5827)](https://user-images.githubusercontent.com/99660044/231889909-74e738ba-e9dc-40b5-a8e1-a878c31ad523.png)
+![Screenshot (5778)](https://user-images.githubusercontent.com/99660044/231889593-ad28e1b9-f843-440a-91d2-f203b5976452.png)
