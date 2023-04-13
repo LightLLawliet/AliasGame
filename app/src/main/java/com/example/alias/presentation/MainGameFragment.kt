@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.alias.AliasApp
@@ -32,27 +33,30 @@ class MainGameFragment : Fragment() {
         val showButton = view.findViewById<Button>(R.id.showAnswer)
         val textView = view.findViewById<TextView>(R.id.textTitle)
         val titleText = view.findViewById<TextView>(R.id.titleText)
+        val progressBar = view.findViewById<ProgressBar>(R.id.progressBar)
 
         startButton.setOnClickListener {
+            progressBar.visibility = View.VISIBLE
             titleText.visibility = View.GONE
             textView.visibility = View.GONE
-            startButton.text = getString(R.string.next_riddle)
-            startButton.isEnabled = false
-            showButton.isEnabled = false
+            startButton.text = getString(R.string.riddle_next)
+            startButton.visibility = View.GONE
+            showButton.visibility = View.GONE
             viewModel.getRiddle()
         }
 
         val riddleUiCallback = object : RiddleUiCallback {
             override fun provideRiddle(riddle: String) {
+                progressBar.visibility = View.GONE
                 textView.visibility = View.GONE
-                startButton.isEnabled = true
+                startButton.visibility = View.VISIBLE
                 startButton.visibility = View.VISIBLE
                 titleText.visibility = View.VISIBLE
                 titleText.text = riddle
             }
 
             override fun provideAnswer(answer: String) {
-                showButton.isEnabled = true
+                showButton.visibility = View.VISIBLE
                 showButton.visibility = View.VISIBLE
                 textView.text = answer
             }

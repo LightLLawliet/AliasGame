@@ -6,7 +6,7 @@
     <string name="aboutUsTitleText">О нас</string>
     <string name="v0_1">v0.1</string>
     <string name="startText">Начать</string>
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="start_game_message">Нажмите кнопку для старта</string>
     <string name="backToStartScreen">Вернуться на главную</string>
@@ -19,4 +19,28 @@
     <string name="next_riddle">Next riddle</string>
     <string name="press_riddle_to_start">Press \'Riddle\' to start</string>
     <string name="back_button">back_button</string>
+    <string name="game_goal">Цель игры</string>
+    <string name="goal_game_text">Вы должны по импровизации игроков из вашей команды угадать: кто вы, где вы и что произошло.</string>
+    <string name="principle_of_game_title">Принцип игры</string>
+    <string name="principle_of_game_description">Компания делится на 2 команды: объясняющую и угадывающую. Участники объясняющей команды поочередно или вместе последовательно объясняют загаданные фразы кто, где и что произошло. Участники угадывающей команды пытаются понять, что же было загадано. Главное помните – кто, где и что произошло может быть никак не связано, а основная цель показывающих – повеселиться, а не показать ответ!</string>
+    <string name="forbidden_subtitle">Запрещено</string>
+    <string name="forbidden_description">1. Называть персонажа,
+2. Использовать прямые объяснения, указывающие на ситуацию,
+3. Использовать синонимы и однокоренные слова, явно указывающие на ответ.</string>
+    <string name="supports_subtitle">Предложения по улучшению</string>
+    <string name="supports_description">Если у вас есть идеи для развития приложения, то мы будем рады им в комментариях!</string>
+    <string name="donate_subtitle">Поддержать</string>
+    <string name="social_subtitle">Социальные сети</string>
+    <string name="tiktok">TikTok</string>
+    <string name="youtube">YouTube</string>
+    <string name="vk">VK</string>
+    <string name="telegram">Telegram</string>
+    <string name="spb">СБП</string>
+    <string name="patreon">Patreon</string>
+    <string name="boosty">Boosty</string>
+    <string name="rate_us">Оценить</string>
+    <string name="riddle_button">Загадка</string>
+    <string name="press_get_riddle">Нажмите \'\'получить загадку\'\' для старта игры</string>
+    <string name="show_answer_button">Показать ответ</string>
+    <string name="riddle_next">Следующая загадка</string>
 </resources>

@@ -18,20 +18,28 @@
 
         <TextView
             android:id="@+id/titleText"
-            android:text="@string/press_riddle_to_start"
+            android:text="@string/press_get_riddle"
             style="@style/riddle_style" />
 
         <TextView
             android:id="@+id/textTitle"
-            tools:text="Text"
             style="@style/answer_style" />
     </LinearLayout>
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        tools:visibility="visible"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/progress_bg"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:orientation="vertical"
         android:layout_margin="@dimen/margin_medium"
         android:gravity="bottom|center"
         android:paddingBottom="10dp">
@@ -39,17 +47,15 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/startGameButton"
             style="@style/gameRoundButton"
-            android:layout_weight="2"
-            android:layout_marginRight="@dimen/margin_medium"
-            android:text="@string/riddle"
+            android:text="@string/riddle_button"
             app:cornerRadius="30dp" />
 
         <com.google.android.material.button.MaterialButton
+            android:layout_marginTop="@dimen/margin_small"
             android:visibility="gone"
             android:id="@+id/showAnswer"
-            android:layout_weight="1"
             style="@style/gameRoundButton"
-            android:text="@string/show_answer"
+            android:text="@string/show_answer_button"
             app:cornerRadius="30dp" />
     </LinearLayout>
 

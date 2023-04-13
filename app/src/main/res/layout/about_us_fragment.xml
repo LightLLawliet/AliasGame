@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/margin_large"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_medium"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_arrow"
-            android:contentDescription="@string/back_button" />
+            android:contentDescription="@string/back_button"
+            android:src="@drawable/ic_arrow" />
 
         <TextView
             style="@style/fragmentTitle"
@@ -24,6 +27,72 @@
             android:layout_gravity="center"
             android:text="@string/aboutUsTitleText" />
     </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        style="@style/subtitle_style"
+        android:text="@string/supports_subtitle"
+        app:drawableStartCompat="@drawable/ic_settings" />
+
+    <View style="@style/underline" />
+
+    <TextView
+        style="@style/description_style"
+        android:text="@string/supports_description" />
+
+
+    <TextView
+        style="@style/subtitle_style"
+        android:text="@string/donate_subtitle"
+        app:drawableStartCompat="@drawable/ic_support_like" />
+
+    <View style="@style/underline" />
+
+    <TextView
+        style="@style/about_us_description_style"
+        android:text="@string/rate_us"
+        app:drawableStartCompat="@drawable/ic_like" />
+
+    <TextView
+        style="@style/about_us_description_style"
+        android:text="@string/boosty"
+        app:drawableStartCompat="@drawable/ic_boosty" />
+
+    <TextView
+        style="@style/about_us_description_style"
+        android:text="@string/patreon"
+        app:drawableStartCompat="@drawable/ic_patreon" />
+
+    <TextView
+        style="@style/about_us_description_style"
+        android:text="@string/spb"
+        app:drawableStartCompat="@drawable/ic_sbp" />
+
+    <TextView
+        style="@style/subtitle_style"
+        android:text="@string/social_subtitle"
+        app:drawableStartCompat="@drawable/ic_social" />
+
+    <View style="@style/underline" />
+
+    <TextView
+        style="@style/about_us_description_style"
+        android:text="@string/telegram"
+        app:drawableStartCompat="@drawable/ic_telegram" />
+
+    <TextView
+        style="@style/about_us_description_style"
+        android:text="@string/vk"
+        app:drawableStartCompat="@drawable/ic_vk" />
+
+    <TextView
+        style="@style/about_us_description_style"
+        android:text="@string/youtube"
+        app:drawableStartCompat="@drawable/ic_youtube" />
+
+    <TextView
+        style="@style/about_us_description_style"
+        android:text="@string/tiktok"
+        app:drawableStartCompat="@drawable/ic_tiktok" />
 
 
 </LinearLayout>
