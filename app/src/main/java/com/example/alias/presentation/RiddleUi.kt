@@ -15,8 +15,8 @@ interface RiddleUi {
         }
     }
 
-    class Base(riddle: String, answer: String) :
+    data class Base(private val riddle: String, private val answer: String) :
         Abstract(riddle, answer)
 
-    class Failed(value: String) : Abstract(value, "")
+    data class Failed(private val value: String) : Abstract(value, "")
 }

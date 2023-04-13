@@ -1,5 +1,7 @@
 package com.example.alias.presentation
 
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.alias.data.Repository
@@ -12,18 +14,18 @@ import com.example.alias.data.Error
 import kotlinx.coroutines.withContext
 
 class MainViewModel(
+    private val riddleLiveDataWrapper: RiddleLiveDataWrapper,
     private val repository: Repository<RiddleUi, Error>,
     private val toBaseUi: Riddle.Mapper<RiddleUi> = ToBaseUi(),
     dispatchersList: DispatchersList = DispatchersList.Base(),
-) : BaseViewModel(dispatchersList = dispatchersList) {
+) : BaseViewModel(dispatchersList = dispatchersList), Observe<RiddleUi> {
 
-    private var riddleUiCallback: RiddleUiCallback = RiddleUiCallback.Empty()
-
-    private val blockUi: suspend (RiddleUi) -> Unit = { it.showRiddle(riddleUiCallback) }
-
-    fun init(riddleUiCallback: RiddleUiCallback) {
-        this.riddleUiCallback = riddleUiCallback
+    private val blockUi: suspend (RiddleUi) -> Unit = {
+        riddleLiveDataWrapper.map(it)
     }
+
+    override fun observe(owner: LifecycleOwner, observer: Observer<RiddleUi>) =
+        riddleLiveDataWrapper.observe(owner, observer)
 
     fun getRiddle() {
         handle({
@@ -34,11 +36,6 @@ class MainViewModel(
                 RiddleUi.Failed(result.errorMessage())
         }, blockUi)
     }
-
-    override fun onCleared() {
-        super.onCleared()
-        riddleUiCallback = RiddleUiCallback.Empty()
-    }
 }
 
 interface RiddleUiCallback {
@@ -46,13 +43,6 @@ interface RiddleUiCallback {
     fun provideRiddle(riddle: String)
 
     fun provideAnswer(answer: String)
-
-    class Empty : RiddleUiCallback {
-
-        override fun provideRiddle(riddle: String) = Unit
-
-        override fun provideAnswer(answer: String) = Unit
-    }
 }
 
 interface DispatchersList {

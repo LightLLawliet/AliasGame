@@ -60,6 +60,8 @@ class MainGameFragment : Fragment() {
         showButton.setOnClickListener {
             textView.visibility = View.VISIBLE
         }
-        viewModel.init(riddleUiCallback)
+        viewModel.observe(this) {
+            it.showRiddle(riddleUiCallback)
+        }
     }
 }

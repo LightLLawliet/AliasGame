@@ -19,6 +19,6 @@ class MainActivity : AppCompatActivity(), ShowFragment {
                 .navigate(supportFragmentManager, R.id.container)
     }
 
-    override fun show(fragment: Fragment) =
+     override fun show(fragment: Fragment) =
         NavigationStrategy.Replace(fragment).navigate(supportFragmentManager, R.id.container)
 }
