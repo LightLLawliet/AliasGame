@@ -34,8 +34,8 @@ class MainGameFragment : Fragment() {
         val titleText = view.findViewById<TextView>(R.id.titleText)
 
         startButton.setOnClickListener {
-            textView.visibility = View.GONE
             titleText.visibility = View.GONE
+            textView.visibility = View.GONE
             startButton.text = getString(R.string.next_riddle)
             startButton.isEnabled = false
             showButton.isEnabled = false
@@ -44,6 +44,7 @@ class MainGameFragment : Fragment() {
 
         val riddleUiCallback = object : RiddleUiCallback {
             override fun provideRiddle(riddle: String) {
+                textView.visibility = View.GONE
                 startButton.isEnabled = true
                 startButton.visibility = View.VISIBLE
                 titleText.visibility = View.VISIBLE
